@@ -1,2 +1,3 @@
-# Code
-Code snippets and projects
+# My Code Repository
+
+Contians my code snippets and projects. 

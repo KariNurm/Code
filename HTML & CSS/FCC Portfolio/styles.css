@@ -1,0 +1,94 @@
+:root {
+ --bg-col: linear-gradient(135deg, black,rgb(18, 12, 8) 50%, rgb(83, 40, 7) 100%);
+}
+
+@media only screen and (max-width: 600px) {
+   :root {
+    --bg-col: linear-gradient(180deg, black,rgb(18, 12, 8) 50%, rgb(83, 40, 7) 100%);
+   } 
+} 
+@media only screen and (min-width: 1200px) {
+   :root {
+    --bg-col: linear-gradient(225deg, black,rgb(18, 12, 8) 50%, rgb(83, 40, 7) 100%);
+   } 
+} 
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: rgb(63, 63, 96);
+    font-family: 'IBM Plex Mono',serif;
+}
+#navbar {
+    position: fixed;
+    width: 100vw;
+    right: 0%;
+    background-color: rgb(91, 46, 10);;
+    text-align: right; 
+    font-size: 2rem;
+    z-index: 2;
+    
+}
+.navlink {
+    text-decoration: none;
+    color:rgb(217, 110, 23);
+}
+.navlink:hover {
+    color:rgb(136, 68, 12);
+}
+.navlink:active {
+    color:rgb(146, 32, 32);
+}
+
+#welcome-section {
+    height: 100vh;
+    width: 100vw;
+    background: var(--bg-col)
+}
+
+#welcome-section h1 {
+    position: absolute;
+    left: 5%;
+    top: 12%;
+    color: rgb(84, 42, 8);
+    font-size: 2rem;
+}
+#welcome-section span {
+    color: rgb(184, 94, 21);
+    font-size: 2.5rem;
+}
+
+#projects {
+    height: 100vh;
+    width: 100vw;
+    background: var(--bg-col);
+}
+
+.project-tile {
+    position: relative;
+    top: 5%;
+    color: rgb(84, 42, 8);
+}
+#projects a {
+    position: relative;
+    font-size: 1.2rem;
+    left: 2%;
+    top: 10%;
+    color: rgb(84, 42, 8);
+}
+
+#contact {
+    text-align: center;
+    background: var(--bg-col);
+}
+#contact h1 {
+    color: rgb(84, 42, 8);
+}
+#contact a {
+    color: rgb(195, 99, 20);
+    text-decoration: none;
+}
