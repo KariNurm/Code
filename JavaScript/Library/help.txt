@@ -1,0 +1,18 @@
+Here’s a list of commands you can use!
+
+AVAILABLE EVERYWHERE
+help                Prints this listing.
+quit                Quits the program.
+search              Opens a dialog for searching for a book in the library system.
+
+ONLY AVAILABLE WHEN LOGGED OUT
+signup              Opens a dialog for creating a new account.
+login               Opens a dialog for logging into an existing account.
+ 
+ONLY AVAILABLE WHEN LOGGED IN
+list                Lists the books you are currently borrowing.
+borrow              Opens a dialog for borrowing a book.
+return              Opens a dialog for returning a book.
+change_name         Opens a dialog for changing the name associated with the account.
+remove_account      Opens a dialog for removing the currently logged in account from the library system.
+logout              Logs out the currently logged in user.
