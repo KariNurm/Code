@@ -1,0 +1,55 @@
+.inputField {
+  font-family: Gloria Hallelujah, serif;
+  font-size: 1.5rem;
+  height: 2.95rem;
+  border: solid rgb(15, 55, 1);
+  border-radius: 10px;
+  margin-left: 15px;
+  margin-right: 5px;
+  padding: 2px;
+  background-color: rgb(255, 132, 0);
+}
+.inputField:hover {
+	background-color: rgb(182, 94, 0);
+}
+.inputField:focus {
+	background-color: rgb(255, 132, 0);
+}
+
+.inputButton {
+  font-family: Gloria Hallelujah, serif;
+  font-size: 1.5rem;
+  padding: 0;
+  border: solid rgb(15, 55, 1);
+  border-radius: 10px;
+  padding: 2px;
+  background-color: rgb(255, 132, 0);
+}
+
+.form {
+    display: inline-block;
+}
+
+.warning {
+  position: absolute;
+  background-color: red;
+  height: 176%;
+  width: 100%;
+  top: -20%;
+  border: solid black;
+  border-radius: 30px;
+  color: black;
+  font-family: Gloria Hallelujah, serif;
+}
+
+.okBtn {
+  font-family: Gloria Hallelujah, serif;
+  position: absolute;
+  left: 45%;
+  top: 80%;
+  background-color: rgb(94, 0, 0);
+  border-radius: 100%;
+  font-size: 1.5rem;
+  width: 15%
+
+}

@@ -1,0 +1,77 @@
+
+.App {
+  text-align: center;
+  background: linear-gradient(45deg, rgba(255,0,0,0.5), rgb(0, 0, 0) 30%,rgb(0, 0, 0) 80%, green 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  font-family: Gloria Hallelujah, serif;
+}
+
+.span1{
+  color: Green
+}
+.span2{
+  color: red
+}
+
+.navBar h1 {
+  color:rgb(159, 159, 159);
+  position: fixed;
+  top: 0%;
+  margin: 0;
+  left: 5%
+}
+
+.navBar {
+  margin-top: 1%;
+  margin-left: 29%;
+  padding: 5px;
+  position: fixed;
+  border: solid rgb(15, 55, 1);
+  border-radius: 20px;
+  z-index: 2;
+  background-color: rgb(21, 33, 18);
+  left: 2vw;
+  top: 2vh;
+}
+.searchInput {
+  font-family: Gloria Hallelujah, serif;
+  font-size: 1.5rem;
+  height: 2.95rem;
+  border: solid rgb(15, 55, 1);
+  padding: 2px;
+  background-color: rgb(255, 132, 0);
+  border-radius: 10px;
+}
+.searchInput:hover {
+	background-color: rgb(182, 94, 0);
+}
+.searchInput:focus {
+	background-color: rgb(255, 132, 0);
+}
+.searchButton {
+  font-family: Gloria Hallelujah, serif;
+  font-size: 1.5rem;
+  padding: 0;
+  margin-left: 5px;
+  border: solid rgb(15, 55, 1);
+  padding: 2px;
+  border-radius: 10px;
+  background-color: rgb(255, 132, 0);
+}
+.searchWrap {
+  display: inline-block;
+}
+.renderWrap {
+  margin-top: 12%;
+  padding: 30px;
+  min-width: 60vw;
+  background-color: rgb(8, 37, 7);
+  border: solid rgb(15, 55, 1);
+  border-radius: 20px;
+}

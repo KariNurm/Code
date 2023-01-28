@@ -1,0 +1,34 @@
+{
+  "defaultTodos": [
+    {
+      "id": 3,
+      "text": "Exercise",
+      "complete": false,
+      "time": "5"
+    },
+    {
+      "id": 4,
+      "text": "Do the dishes",
+      "complete": false,
+      "time": "4"
+    },
+    {
+      "id": 5,
+      "text": "Eat pizza",
+      "complete": false,
+      "time": "3"
+    },
+    {
+      "id": 6,
+      "text": "Play videogames",
+      "complete": true,
+      "time": "2"
+    },
+    {
+      "id": "fb36234e-d0d4-42c0-8243-a8b89070107f",
+      "text": "    : )",
+      "complete": false,
+      "time": 1674061339155
+    }
+  ]
+}

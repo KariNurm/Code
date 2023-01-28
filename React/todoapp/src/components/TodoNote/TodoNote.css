@@ -1,0 +1,125 @@
+.bg-col-green {
+    background-color: rgb(38, 74, 2);   
+}
+.bg-col-red {
+    background-color: rgb(121, 36, 5);   
+}
+
+.todo-note {
+    padding: 0;
+    display: block;
+    width: 60vw;
+    margin-bottom: 10px;
+		border: solid rgb(15, 55, 1);
+    border-radius: 15px;
+    overflow-wrap: break-word;
+}
+
+.noteText {
+		position: relative;
+		left: 18%;
+		padding-top: 10px;
+		margin-block-end: 0%;
+		margin-block-start: 0%;
+		max-width: 40vw;
+}
+
+.removeButton {
+		font-family: Gloria Hallelujah, serif;
+    color: black;
+		font-size: 1.5rem;
+    background-color: rgb(255, 132, 0);
+    border-color: solid black;
+		border-radius: 100%;
+    position: relative;
+		width: 3.4rem;
+		padding: 2px;
+		right: -46%;
+}
+.removeButtonEdit {
+	font-family: Gloria Hallelujah, serif;
+	color: black;
+	font-size: 1.5rem;
+	background-color: rgb(255, 132, 0);
+	border-color: solid black;
+	border-radius: 100%;
+	position: relative;
+	width: 3.4rem;
+	padding: 2px;
+	right: -22%;
+}
+
+.editButton {
+		position: relative;
+		right: 45%;
+		margin-bottom: 7px;
+    font-family: Gloria Hallelujah, serif;
+    font-size: 1.5rem;
+		padding: 2px;
+    border: solid black;
+		background-color: rgb(255, 132, 0);
+    border-radius: 10px;
+}
+
+.saveButton {
+	font-family: Gloria Hallelujah, serif;
+  font-size: 1.5rem;
+  padding: 0;
+  border: solid black;
+	background-color: rgb(255, 132, 0);
+	padding: 2px;
+  border-radius: 10px;
+	margin-left: 5px;
+}
+
+.saveInput {
+	font-family: Gloria Hallelujah, serif;
+  font-size: 1.5rem;
+  height: 3.1rem;
+  border: solid black;
+  border-radius: 10px;
+	margin-top: 8%;
+	margin-bottom: 8%;
+	margin-left: 5%;
+	margin-right: 0;
+	background-color: rgb(255, 132, 0);
+}
+
+.saveInput:hover {
+	background-color: rgb(182, 94, 0);
+}
+.saveInput:focus {
+	background-color: rgb(255, 132, 0);
+}
+
+
+.checkBox {
+		position: absolute;
+    left: 20%;
+    margin-top: 1%;
+    height: 20px;
+    width: 20px;
+}
+
+.labelCheck {
+	width: fit-content;
+	margin: 0;
+	left: 22.5%;
+	position: absolute;
+  font-size: 1.2rem;
+}
+
+.wrapEmpty {
+	display: block;
+	position: relative;
+	background-color: blue;
+	margin: 0;
+	
+}
+
+.inputEmpty {
+	position: absolute;
+	margin: 0;
+	left: 30%;
+	top: -50px
+}
