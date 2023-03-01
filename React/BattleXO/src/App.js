@@ -2,29 +2,15 @@ import React from 'react';
 import { useState } from 'react';
 import './style.css';
 import Board from './Board';
+import NewGame from './NewGame';
 
 export default function App() {
-  const [currentGame, setCurrentGame] = useState([
-    [
-      [1, ''],
-      [2, ''],
-      [3, ''],
-    ],
-    [
-      [4, ''],
-      [5, ''],
-      [6, ''],
-    ],
-    [
-      [7, ''],
-      [8, ''],
-      [9, ''],
-    ],
-  ]);
-  const [isPlayerX, setPlayerX] = useState(false);
+  const [currentGame, setCurrentGame] = useState([]);
+  const [isPlayerX, setPlayerX] = useState(true);
+  const [newGame, setNewGame] = useState(true);
+  const [winner, setWinner] = useState('');
 
   const playerClick = (id) => {
-    console.log(id)
     const player = isPlayerX ? 'X' : 'O';
     let row;
     let index;
@@ -50,7 +36,6 @@ export default function App() {
       default:
         console.log('error');
     }
-
     const newRow = currentGame[row].map((cell) => {
       if (cell[0] === id) {
         return [id, player];
@@ -58,20 +43,50 @@ export default function App() {
         return cell;
       }
     });
-
-  
     currentGame[row] = newRow;
-  
-
     setCurrentGame(currentGame);
     setPlayerX(!isPlayerX);
+  };
 
-    // filter state, change state, change player
+  const handleClick = () => {
+    setNewGame(!newGame);
+    setWinner('');
+    setCurrentGame([
+      [
+        [1, ''],
+        [2, ''],
+        [3, ''],
+      ],
+      [
+        [4, ''],
+        [5, ''],
+        [6, ''],
+      ],
+      [
+        [7, ''],
+        [8, ''],
+        [9, ''],
+      ],
+    ]);
   };
 
   return (
     <div className="main">
       <h1>Battle XO</h1>
+      {newGame ? (
+        <div className="newGame">
+          <h2>
+            Play a{' '}
+            <span className="game" onClick={handleClick}>
+              game
+            </span>
+            ?
+          </h2>
+        </div>
+      ) : (
+        <div style={{ height: '28.0333px' }}></div>
+      )}
+
       <div className="boardContainer">
         <Board
           isPlayerX={isPlayerX}

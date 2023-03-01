@@ -3,7 +3,6 @@ import Button from './Button.js';
 import './style.css';
 
 export default function Board({ isPlayerX, currentGame, playerClick }) {
-  console.log(currentGame);
   let rows = currentGame.map(ele => {
     return  <>
               {ele.map(cell => {

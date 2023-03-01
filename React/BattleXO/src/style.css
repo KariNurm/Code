@@ -1,73 +1,102 @@
 h1,
 p {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(149, 1, 1, 0.65);
   text-align: center;
 }
 
+html,
 body {
+  background-color: black;
+  padding: 0;
   margin: 0;
 }
-
 .main {
-  background: green;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.897),
+    rgba(0, 0, 0, 0.897) 20%,
+    rgba(197, 0, 0, 0.65) 60%,
+    rgba(149, 1, 1, 0.65) 100%
+  );
   height: 100vh;
   margin: none;
   padding: none;
 }
 
+.newGame {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(149, 1, 1, 0.65);
+  text-align: center;
+}
+
+.game:hover {
+  color: rgb(255, 0, 0);
+}
+.game:active {
+  color: rgba(109, 0, 0, 0.829);
+}
+
 .boardContainer {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
-  
   margin: 10%;
+  margin-top: 20%;
+  grid-area: unset;
   border: solid black;
   text-align: center;
   padding: 5%;
   height: 50vw;
-}
-
-.button {
-  border: none;
-  padding: 0;
-  margin: 0;
-  background-color: aquamarine;
+  background-color: rgba(255, 0, 0, 0.65);
+  border-radius: 10%;
 }
 
 .btnBox {
+  font-family: fantasy;
+  font-size: 2.6rem;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-content: center;
-  align-self: stretch;
-  justify-self: stretch;
-  background: aquamarine;
+  align-items: stretch;
+  background: rgb(32, 9, 1);
 }
+
+.btnBox:hover {
+  background-color: rgb(53, 14, 2);
+}
+
+.letter {
+  height: 30px;
+}
+
 .a {
-  border-right: solid red;
-  border-bottom: solid red;
+  border-right: solid rgba(255, 0, 0, 0.65);
+  border-bottom: solid rgba(255, 0, 0, 0.65);
+  border-radius: 5% 0 0 0;
 }
 .b {
-  border-bottom: solid red;
+  border-bottom: solid rgba(255, 0, 0, 0.65);
 }
 .c {
-  border-left: solid red;
-  border-bottom: solid red;
+  border-left: solid rgba(255, 0, 0, 0.65);
+  border-bottom: solid rgba(255, 0, 0, 0.65);
+  border-radius: 0 5% 0 0;
 }
 .d {
-  border-right: solid red;
+  border-right: solid rgba(255, 0, 0, 0.65);
 }
 .f {
-  border-left: solid red;
+  border-left: solid rgba(255, 0, 0, 0.65);
 }
+
 .g {
-  border-right: solid red;
-  border-top: solid red;
+  border-right: solid rgba(255, 0, 0, 0.65);
+  border-top: solid rgba(255, 0, 0, 0.65);
+  border-radius: 0 0 0 5%;
 }
 .h {
-  border-top: solid  red;
+  border-top: solid rgba(255, 0, 0, 0.65);
 }
 .i {
-  border-left: solid red;
-  border-top: solid red;
+  border-left: solid rgba(255, 0, 0, 0.65);
+  border-top: solid rgba(255, 0, 0, 0.65);
+  border-radius: 0 0 5% 0;
 }
