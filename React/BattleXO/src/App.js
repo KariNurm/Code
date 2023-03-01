@@ -24,6 +24,7 @@ export default function App() {
   const [isPlayerX, setPlayerX] = useState(false);
 
   const playerClick = (id) => {
+    console.log(id)
     const player = isPlayerX ? 'X' : 'O';
     let row;
     let index;
@@ -57,12 +58,15 @@ export default function App() {
         return cell;
       }
     });
+
+  
     currentGame[row] = newRow;
+  
 
     setCurrentGame(currentGame);
     setPlayerX(!isPlayerX);
 
-   
+    // filter state, change state, change player
   };
 
   return (

@@ -17,17 +17,57 @@ body {
 }
 
 .boardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  
   margin: 10%;
   border: solid black;
   text-align: center;
-  padding: 10px
+  padding: 5%;
+  height: 50vw;
 }
 
 .button {
-  background-color: teal;
-  margin: 1px;
-  padding: 1px;
-  height: 100%;
-  border: solid black;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: aquamarine;
 }
 
+.btnBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-self: stretch;
+  justify-self: stretch;
+  background: aquamarine;
+}
+.a {
+  border-right: solid red;
+  border-bottom: solid red;
+}
+.b {
+  border-bottom: solid red;
+}
+.c {
+  border-left: solid red;
+  border-bottom: solid red;
+}
+.d {
+  border-right: solid red;
+}
+.f {
+  border-left: solid red;
+}
+.g {
+  border-right: solid red;
+  border-top: solid red;
+}
+.h {
+  border-top: solid  red;
+}
+.i {
+  border-left: solid red;
+  border-top: solid red;
+}
