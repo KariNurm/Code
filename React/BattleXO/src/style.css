@@ -36,6 +36,14 @@ body {
   color: rgba(109, 0, 0, 0.829);
 }
 
+.winner {
+  color: rgb(211, 132, 29);
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  transform: rotate(45deg);
+}
+
 .boardContainer {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
