@@ -4,4 +4,6 @@
 
 *** Not meant for big screens :)
 
-*** win conditions works for simple solutions, but needs to be tweeked/redone.
+*** Redid win condition logic and added a reset button. Game works now.
+
+*** Developement of this project has ended.

@@ -7,7 +7,7 @@ export default function App() {
   const [currentGame, setCurrentGame] = useState([]);
   const [isPlayerX, setPlayerX] = useState(true);
   const [newGame, setNewGame] = useState(true);
-  const [winner, setWinner] = useState('X');
+  const [winner, setWinner] = useState('');
 
   // handle player click on the field
   const playerClick = (id) => {
@@ -65,35 +65,52 @@ export default function App() {
 
   const checkForWin = () => {
     let val;
+    const statusArr = [];
+
     if(isPlayerX) { val = "X"} else { val = "O"};
-    console.log(val, "sisään")
-    console.log(currentGame.flat(),"flat")
-    const statusMap = currentGame.flat().map((ele) => {
+
+    const findVal = currentGame.flat().forEach((ele, i) => {
       if(ele[1] === val) {
-        return val
-      } else {
-        return ''
+        statusArr.push(i);
       }
-    })
-    console.log(statusMap)
-    const winConditions = [
-      [val,'','',val,'','',val,'',''], 
-      ['',val,'','',val,'','',val,''],  
-      ['','',val,'','',val,'','',val],  
-      [val,val,val,'','','','','',''], 
-      ['','','',val,val,val,'','',''],
-      ['','','','','','',val,val,val],
-      [val,'','','',val,'','','',val],
-      ['','',val,'',val,'',val,'','']
-    ]
-    
-    winConditions.forEach(ele => {
-      if(ele.toString() === statusMap.toString()){
-        setWinner(val);
-        setNewGame(true);
-      } 
+
     })
 
+    const winConditions = [
+	                          [0, 3, 6],
+	                          [1, 4, 7],
+	                          [2, 5, 8],
+	                          [0, 1, 2],
+	                          [3, 4, 5],
+	                          [6, 7, 8],
+	                          [0, 4, 8],
+	                          [2, 4, 6]
+                          ];
+    
+    winConditions.forEach((ele) => {
+      let winCount = 0;
+        ele.forEach(ind => {
+          if(statusArr.includes(ind)){
+            winCount++;
+          }
+        })
+        if(winCount === 3) {
+          setWinner(val);
+          setCurrentGame([]);
+          setPlayerX(true);
+          setNewGame(true);
+        }
+      })
+  }
+  
+  const Reset = () => {
+    
+    return <>
+      <button className="resetBtn" onClick={(e) => {setCurrentGame([]);
+                                                    setPlayerX(true);
+                                                    setNewGame(true);}
+                                                    }>Reset</button>
+    </>
   }
 
   return (
@@ -117,6 +134,7 @@ export default function App() {
       )}
 
       <div className="boardContainer">
+        {newGame? <></> : <Reset />}
         <Board
           isPlayerX={isPlayerX}
           currentGame={currentGame}

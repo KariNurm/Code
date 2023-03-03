@@ -2,7 +2,10 @@ import React from 'react';
 import Button from './Button.js';
 import './style.css';
 
-export default function Board({ isPlayerX, currentGame, playerClick }) {
+export default function Board({ currentGame, playerClick }) {
+  
+  
+  
   let rows = currentGame.map(ele => {
     return  <>
               {ele.map(cell => {
