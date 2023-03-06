@@ -17,8 +17,9 @@ Personal goal is to improve on front- and backend developement and react state m
 ### Backend: &#x2610;
   - axios &#x2610;
   
+### Updates:
 
-
+1. Project started with category listing and some basic css  for developement.
 
 
 
