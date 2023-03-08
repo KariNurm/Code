@@ -24,5 +24,7 @@ For this project I used StackBlitz and TheMealDB.com.
 
 1. Project started with category listing and some basic css  for developement.
 
+2. Added some structure. Having trouble with the fetch.
+
 
 

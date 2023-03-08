@@ -12,6 +12,17 @@ p {
 .app {
 }
 
+/* NavBar */
+
+.navBar {
+  background-color: brown;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: solid black;
+  border-radius: 0%;
+}
+
 /* Categories */
 
 .categories {

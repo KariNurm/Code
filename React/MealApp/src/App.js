@@ -3,7 +3,11 @@ import './style.css';
 import { useEffect, useState } from 'react';
 import { getCategories } from './Fetch';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Categories from './Categories'
+import Categories from './Categories';
+import Header from './Header';
+import Main from './Main';
+import Search from './Search';
+import Random from './Random'
 
 export default function App() {
   useEffect(() => {
@@ -17,12 +21,14 @@ export default function App() {
 
   return (
     <div className="app">
-    
+      <Header />
       <h1 className="title">LetsCook!</h1>
-      
-      <div className="categories">
-        <Categories catList={catList}/>
-      </div>
+      <Routes key={location.pathname} location={location}>
+        <Route path="/" element={<Main />}></Route>
+        <Route path="/categories" element={<Categories catList={catList}/>}></Route>
+        <Route path="/search" element={<Search />}></Route>
+        <Route path="/random" element={<Random />}></Route>
+      </Routes>
     </div>
   );
 }
