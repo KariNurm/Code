@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.css';
 import { useEffect, useState } from 'react';
-import { getCategories } from './Fetch';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Categories from './Categories';
 import Header from './Header';
@@ -11,7 +10,9 @@ import Random from './Random'
 
 export default function App() {
   useEffect(() => {
-    getCategories().then((data) => {
+    fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
+            .then((response) => response.json())
+            .then((data) => {
       setCatList(data.categories);
     });
   }, []);

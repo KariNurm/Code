@@ -26,5 +26,7 @@ For this project I used StackBlitz and TheMealDB.com.
 
 2. Added some structure. Having trouble with the fetch.
 
+3. Fixed fetch problems and added random meal page. Data is still rudimentary displayed for now.
+
 
 
