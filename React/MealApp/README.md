@@ -28,5 +28,5 @@ For this project I used StackBlitz and TheMealDB.com.
 
 3. Fixed fetch problems and added random meal page. Data is still rudimentary displayed for now.
 
-
+4. Added an element for single meal with image, incredients, and instructions. Imported a fancier font.
 

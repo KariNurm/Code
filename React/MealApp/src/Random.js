@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
+import MealElement from './MealElement'
 
 function Random() {
 const [rndMeal, setRndMeal] = useState(null)
@@ -23,9 +24,12 @@ useEffect(() => {
 }, [clicked]);
 
 return <div className="random">
-        <h2>Hungry!</h2>
-        <button onClick={handleClick}>Go!</button>
-        {rndMeal && <div>{rndMeal.meals[0].strMeal}</div>}
+        <h2 className="hungry">Hungry!</h2>
+        <div className="hBtnDiv">
+          <button className="hBtn" onClick={handleClick}>Suprise me!</button>
+        </div>
+        {console.log("ennen mealele",rndMeal)}
+        {rndMeal && <MealElement element={rndMeal} />}
        </div>
 
 

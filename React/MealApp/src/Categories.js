@@ -1,7 +1,19 @@
 import React from 'react';
 import './style.css';
+import { useState, useEffect} from 'react'
 
-function Categories({ catList }) {
+function Categories() {
+
+  useEffect(() => {
+    fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
+            .then((response) => response.json())
+            .then((data) => {
+      setCatList(data.categories);
+    });
+  }, []);
+  const [catList, setCatList] = useState([]);
+
+
   return (
     <div className="categories">
       {catList.map((ele) => {
