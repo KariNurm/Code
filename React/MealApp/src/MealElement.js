@@ -4,15 +4,23 @@ import './style.css'
 
 
 function MealElement({element}) {
+const name = element.strMeal;
+const instructions = element.strInstructions
+const instSplit = instructions.split(".");
+const mapInst = instSplit.map(ele => {
 
-console.log("mealEle",element.meals[0])
-const name = element.meals[0].strMeal;
-const instructions = element.meals[0].strInstructions
-const mealImg = element.meals[0].strMealThumb
+  if(ele.length === 0 || ele === Number) {
+    return <></>
+  } else {
+    return <p>-{ele.trim()}.</p>
+
+  }
+})
+const mealImg = element.strMealThumb
 const incrArr = []
-const incrFilter = Object.entries(element.meals[0]).forEach(([key, value]) => {
+const incrFilter = Object.entries(element).forEach(([key, value]) => {
   if(key.includes("strIngredient") === true && value !== "") {
-    incrArr.push([value, element.meals[0][key.replace("strIngredient", "strMeasure")]])
+    incrArr.push([value, element[key.replace("strIngredient", "strMeasure")]])
   }
 })
 const displayIncr = incrArr.map((ele, i) => {
@@ -22,16 +30,17 @@ const displayIncr = incrArr.map((ele, i) => {
           </div>
 })  
 
-console.log(incrArr)
 
 return <div className="mealElement">
          <h2>{name}</h2>
-         <h3>Incredients:</h3>
-         {displayIncr}
-         <img src={mealImg} alt="image of the prepared meal" />
-         <h3>Instructions:</h3>
+         <div className="incredients">
+          <h3>Incredients:</h3>
+          {displayIncr}
+         </div>
+         <img className="img" src={mealImg} alt="image of the prepared meal" />
          <div className="instructions">
-          {instructions}
+          <h3>Instructions:</h3>
+          <div>{mapInst}</div>
          </div>
        </div>
 

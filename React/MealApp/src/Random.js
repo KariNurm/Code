@@ -28,8 +28,7 @@ return <div className="random">
         <div className="hBtnDiv">
           <button className="hBtn" onClick={handleClick}>Suprise me!</button>
         </div>
-        {console.log("ennen mealele",rndMeal)}
-        {rndMeal && <MealElement element={rndMeal} />}
+        {rndMeal && <MealElement element={rndMeal.meals[0]} />}
        </div>
 
 

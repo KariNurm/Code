@@ -30,3 +30,4 @@ For this project I used StackBlitz and TheMealDB.com.
 
 4. Added an element for single meal with image, incredients, and instructions. Imported a fancier font.
 
+5. Search lists result elements, added some css.

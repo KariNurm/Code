@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className="app">
       <Header />
-      <h1 className="title">LetsCook!</h1>
+      <h1 className="title">Lets<span style={{"color": "#CB997E"}}>Cook</span>!</h1>
       <Routes key={location.pathname} location={location}>
         <Route path="/" element={<Main />}></Route>
         <Route path="/categories" element={<Categories />}></Route>

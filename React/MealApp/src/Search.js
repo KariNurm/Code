@@ -1,14 +1,14 @@
 import './style.css'
 import React from 'react';
 import { useState, useEffect } from 'react';
+import MealElement from './MealElement';
 
 function Search() {
   const[search, setSearch] = useState();
-  const[result, setResult] = useState(null);
+  const[result, setResult] = useState([]);
   const[click, setClick] = useState(false);
   
   useEffect(() => {
-    console.log("useEff")
     if (click) {
       searchData();
     }
@@ -19,25 +19,27 @@ function Search() {
     const data = await fetch(url);
     const json = await data.json();
     setResult(json)
-    console.log(result)
     setClick(false)
+    console.log("asynk")
   }
   
   const handleChange = (e) => {
+    console.log("change")
     setSearch(e.target.value)
-    console.log(search)
   }
 
   const handleClick = () => {
-    console.log("hndlClck", search)
+    console.log("click")
     setClick(true)
-    
   } 
+
+  
 
   return <div className="searchDiv">
           <input type="text" value={search} onChange={handleChange} placeHolder="Search for a meal"></input>
           <button onClick={handleClick}>Search</button>
-          {result && result.meals ? <div>{result.meals[0].strMeal}</div> : null}
+          {result && result.meals ? <div>{result.meals.map(ele => {
+            return <MealElement element={ele}/> })}</div> : null}
          </div>
 
 }
