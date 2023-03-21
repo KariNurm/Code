@@ -1,24 +1,32 @@
 import React from 'react';
 import './style.css';
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Categories() {
+  const [catList, setCatList] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
-            .then((response) => response.json())
-            .then((data) => {
-      setCatList(data.categories);
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        setCatList(data.categories);
+      });
   }, []);
-  const [catList, setCatList] = useState([]);
 
+  function handleClick(str) {
+    console.log("tulossa",str)
+    navigate('/list', {state: str} );
+  }
+
+  console.log(catList)
 
   return (
     <div className="categories">
       {catList.map((ele) => {
         return (
-          <div key={ele.idCategory} className="catPair">
+          <div onClick={() => handleClick(ele.strCategory)} key={ele.idCategory} className="catPair">
             <img
               className="catImg"
               src={ele.strCategoryThumb}

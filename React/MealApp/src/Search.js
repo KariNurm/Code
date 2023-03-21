@@ -20,16 +20,13 @@ function Search() {
     const json = await data.json();
     setResult(json)
     setClick(false)
-    console.log("asynk")
   }
   
   const handleChange = (e) => {
-    console.log("change")
     setSearch(e.target.value)
   }
 
   const handleClick = () => {
-    console.log("click")
     setClick(true)
   } 
 

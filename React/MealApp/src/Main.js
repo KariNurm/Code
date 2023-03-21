@@ -4,7 +4,7 @@ import './style.css';
 function Main() {
   return (
     <div className="main">
-      <p>Main</p>
+      <h3 className="h3Main">Welcome to LetsCook! the number one food app!</h3>
     </div>
   );
 }
