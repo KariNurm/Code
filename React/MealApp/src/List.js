@@ -51,7 +51,7 @@ function List() {
       <h3>
         <span onClick={handleClick}>Back! &#8594;</span>
       </h3>
-      <div>{listCat}</div>
+      <div className="categoryElementWrapper">{listCat}</div>
       <h3>
         <span onClick={handleClickTop}>Up! &#8593;</span>
       </h3>

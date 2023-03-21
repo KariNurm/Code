@@ -63,33 +63,34 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  width: 100vw;
-
-  background-color: aqua;
-  border: solid rgb(0, 108, 118);
+  justify-content: space-around;
+  background-color: #cb997e;
+  border: solid#a5a58d;
+  border-radius: 15px;
+  padding: 2%;
 }
 
 .catPair {
+  display: flex;
   text-align: center;
+  flex-direction: column;
+  justify-content: center;
   height: 20vh;
-
-  background-color: rgb(235, 119, 255);
-  border: solid rgb(209, 5, 255);
+  transition: all 0.5s;
+}
+.catPair:hover {
+  height: 22vh;
+  color: #a85c2f;
 }
 
 .catImg {
   max-height: 50%;
-
-  background-color: rgb(119, 142, 255);
-  border: solid rgb(25, 34, 202);
+  border-radius: 50%;
 }
 
 .imgCap {
   margin: 0%;
-
-  background-color: rgb(111, 255, 79);
-  border: solid rgb(23, 125, 5);
+  font-size: 1.5rem;
 }
 
 /* Random */
@@ -98,7 +99,6 @@ body {
   text-align: center;
 }
 .random {
-  border: solid black;
 }
 .hBtnDiv {
   text-align: center;
@@ -108,8 +108,6 @@ body {
   font-family: 'Lobster', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.resultDiv {
-}
 /* Search */
 
 .searchDiv {
@@ -171,13 +169,33 @@ body {
 .list > h3 {
   color: #ce7d4e;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .list > h3 > span:hover {
   color: #a85c2f;
 }
 
+.categoryElementWrapper {
+  border: solid #a5a58d;
+  border-radius: 15px;
+  background-color: #cb997e;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 5px;
+}
+
+.categoryMealsListElement {
+  text-align: center;
+  transition: all 0.5s;
+}
+.categoryMealsListElement:hover {
+  color: #ce7d4e;
+  scale: 1.1;
+}
+
 .catMealListImg {
   height: 150px;
+  border-radius: 5px;
 }
