@@ -68,6 +68,7 @@ body {
   border: solid#a5a58d;
   border-radius: 15px;
   padding: 2%;
+  margin: 10px;
 }
 
 .catPair {
@@ -97,15 +98,19 @@ body {
 
 .hungry {
   text-align: center;
+  font-size: 2rem;
 }
-.random {
-}
+
 .hBtnDiv {
   text-align: center;
 }
 
 .hBtn {
   font-family: 'Lobster', 'Open Sans', 'Helvetica Neue', sans-serif;
+  scale: 2;
+  background-color: #b7b7a4;
+  border-radius: 3px;
+  border-color: #a5a58d;
 }
 
 /* Search */
@@ -114,36 +119,75 @@ body {
   text-align: center;
 }
 
+.searchBtn {
+  font-family: 'Lobster', 'Open Sans', 'Helvetica Neue', sans-serif;
+  scale: 2;
+  background-color: #b7b7a4;
+  border-radius: 3px;
+  border-color: #a5a58d;
+  position: relative;
+  left: 116px;
+}
+
+.searchInput {
+  font-family: 'Lobster', 'Open Sans', 'Helvetica Neue', sans-serif;
+  scale: 2;
+  background-color: #b7b7a4;
+  border-radius: 3px;
+  border-color: #a5a58d;
+}
+
 /* MealElement */
 
-.mealElement {
+.mealElement > h2 {
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 2rem;
 }
+
+.mealBox {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
+  border: solid #a5a58d;
+  border-radius: 15px;
+  margin: 10px;
+  row-gap: 10px;
+  padding: 10px;
+  background-color: #cb997e;
+}
+
 .img {
-  display: inline-block;
-  height: 40vh;
-  margin-left: 5%;
-  border: solid 2px #6b705c;
+  border: solid 2px #a5a58d;
   border-radius: 10px;
+  grid-area: 1 / 2 / 2 / 3;
+  align-self: stretch;
+  max-height: 50vw;
+  max-width: 50vw;
 }
 
 .incredient {
   margin: 1px;
+  padding-bottom: 3px;
 }
 
 .incredients > h3 {
-  margin-top: 2px;
+  margin-top: 4px;
   font-family: 'Lobster', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .incredients {
-  display: inline-block;
   padding: 3px;
-  margin: 3px;
-  width: fit-content;
-  background-color: #a5a58d;
-  border: solid 2px #6b705c;
+  background-color: #b7b7a4;
+  border: solid 2px #a5a58d;
   border-radius: 10px;
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  grid-area: 1 / 1 / 2 / 2;
+  height: fit-content;
+  width: fit-content;
 }
 .instructions > h3 {
   font-family: 'Lobster', 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -153,13 +197,13 @@ body {
   border: solid 2px #a5a58d;
   border-radius: 10px;
   text-align: justify;
-  width: 80vw;
-  background-color: #cb997e;
-  margin-bottom: 5vh;
-  margin-top: 5px;
+  background-color: #b7b7a4;
   padding-top: 1%;
-  padding: 2%;
+  padding: 3px;
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  grid-area: 2 / 1 / 3 / 3;
+  align-self: stretch;
+  width: fit-content;
 }
 
 /* List */
@@ -198,4 +242,27 @@ body {
 .catMealListImg {
   height: 150px;
   border-radius: 5px;
+}
+
+/* Modal */
+
+.modal-container {
+  margin-top: 0;
+  background-color: #ddbea9;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.modal-container > h3 > span {
+  color: #ce7d4e;
+  font-size: 3rem;
+  position: relative;
+  top: 40px;
+  left: 45%;
+  transition: all 0.1s;
+}
+
+.modal-container > h3 > span:hover {
+  color: #a85c2f;
+  font-size: 3.5rem;
 }

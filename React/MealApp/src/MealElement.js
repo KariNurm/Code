@@ -4,7 +4,7 @@ import './style.css'
 
 function MealElement({element}) {
 const name = element.strMeal;
-const instructions = element.strInstructions
+const instructions = element.strInstructions      
 const instSplit = instructions.split(".");
 const mapInst = instSplit.map(ele => {
 
@@ -32,14 +32,16 @@ const displayIncr = incrArr.map((ele, i) => {
 
 return <div className="mealElement">
          <h2>{name}</h2>
-         <div className="incredients">
-          <h3>Incredients:</h3>
-          {displayIncr}
-         </div>
-         <img className="img" src={mealImg} alt="image of the prepared meal" />
-         <div className="instructions">
-          <h3>Instructions:</h3>
-          <div>{mapInst}</div>
+         <div className="mealBox">
+          <div className="incredients">
+           <h3>Incredients:</h3>
+           {displayIncr}
+          </div>
+          <img className="img" src={mealImg} alt="image of the prepared meal" />
+          <div className="instructions">
+            <h3>Instructions:</h3>
+            <div>{mapInst}</div>
+          </div>
          </div>
        </div>
 

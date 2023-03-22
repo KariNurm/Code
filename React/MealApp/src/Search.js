@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import MealElement from './MealElement';
 
 function Search() {
-  const[search, setSearch] = useState();
+  const[search, setSearch] = useState("");
   const[result, setResult] = useState([]);
   const[click, setClick] = useState(false);
   
@@ -33,8 +33,8 @@ function Search() {
   
 
   return <div className="searchDiv">
-          <input type="text" value={search} onChange={handleChange} placeHolder="Search for a meal"></input>
-          <button onClick={handleClick}>Search</button>
+          <input className="searchInput" type="text" value={search} onChange={handleChange} placeHolder="Search for a meal"></input>
+          <button className="searchBtn" onClick={handleClick}>Search</button>
           {result && result.meals ? <div>{result.meals.map(ele => {
             return <MealElement element={ele}/> })}</div> : null}
          </div>
